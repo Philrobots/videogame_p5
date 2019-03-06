@@ -11,7 +11,11 @@ var speed2 = 0;
 function setup() {
   createCanvas(700, 600);
   print("Hello guys!")
-  print("Lets play a game together") 
+  print('The game over here is pretty simple, you guys need to stay',
+        'alive for the more time possible,if the ball touches one of',
+        'the red rectangle, it goes away and the game is over when',
+        'there is no longuer red rectangle')
+  
   
    var inp = createInput('Le jeux vidéo');
   inp.input(myInputEvent);
@@ -51,7 +55,7 @@ function draw() {
   }
   // la balle
   fill(random(150), random(200), random(300));
-  rect(axeX, axeY, 25, 25, 10);
+  var ball = rect(axeX, axeY, 25, 25, 10);
   
   
   // the paddle 
@@ -59,7 +63,7 @@ function draw() {
   if (mouseY > 300){
     fill(255, 0, 200)
   }
-  rect(mouseX, mouseY, 70, 5, 20);
+  var paddle = rect(mouseX, mouseY, 70, 5, 20);
 
 
   
@@ -69,18 +73,34 @@ function draw() {
   strokeWeight(3);
   
   // barrière
-  fill(320, 7, 43)
-  var barriere = rect(0, 0, 5, 100, 0) ;
-  var barriere = rect(0, 110, 5, 100, 0);
-  var barriere = rect(0, 220, 5, 100, 0);
-  var barriere = rect(0, 330, 5, 100, 0);
-  var barriere = rect(0, 440, 5, 100, 0);
-  var barriere = rect(694, 0, 5, 100, 0);
-  var barriere = rect(694, 0, 5, 100, 0) ;
-  var barriere = rect(694, 110, 5, 100, 0);
-  var barriere = rect(694, 220, 5, 100, 0);
-  var barriere = rect(694, 330, 5, 100, 0);
-  var barriere = rect(694, 440, 5, 100, 0);
+  if (barriere != ball){
+    fill(240, 0, 0)
+  }
+   else if (barriere == ball){
+  fill(0, 0, 0)}
+  var z = 0;
+  var barriere = rect(0, 0, 10, 100, 0) ;
+  var barriere = rect(0, 110, 10, 100, 0);
+  var barriere = rect(0, 220, 10, 100, 0);
+  var barriere = rect(0, 330, 10, 100, 0);
+  var barriere = rect(0, 440, 10, 100, 0);
+  var barriere = rect(690, 0, 10, 100, 0);
+  var barriere = rect(690, 0, 10, 100, 0) ;
+  var barriere = rect(690, 110, 10, 100, 0);
+  var barriere = rect(690, 220, 10, 100, 0);
+  var barriere = rect(690, 330, 10, 100, 0);
+  var barriere = rect(690, 440, 10, 100, 0);
+  var barriere = rect(40, 0, 100, 10, 0);
+  var barriere = rect(160, 0, 100, 10, 0);
+  var barriere = rect(280, 0, 100, 10, 0);
+  var barriere = rect(400, 0, 100, 10, 0);
+  var barriere = rect(520, 0, 100, 10, 0);
+  var barriere = rect(20, 590, 100, 10, 0);
+  var barriere = rect(140, 590, 100, 10, 0);
+  var barriere = rect(280, 590, 100, 10, 0);
+  var barriere = rect(400, 590, 100, 10, 0);
+  var barriere = rect(520, 590, 100, 10, 0);
 
 
   }
+
