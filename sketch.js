@@ -86,7 +86,7 @@ var w = 0;
   var p = 0
   for (var p = 0; p < 500; p = p + 120) {
     fill(0, 0, 30)
-    rect(690, p, 10, 100, 0);
+    rect(680, p, 10, 100, 0);
   }
   // barriere haut
   var k = 0
