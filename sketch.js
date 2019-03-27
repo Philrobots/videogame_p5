@@ -59,9 +59,9 @@ function draw() {
   
   
   // the paddle 
-  fill(20, 430, 2);
+  fill(0, 40, 200);
   if (mouseY > 300){
-    fill(255, 0, 200)
+    fill(400, 0, 200)
   }
   var paddle = rect(mouseX, mouseY, 70, 5, 20);
 
@@ -72,34 +72,39 @@ function draw() {
   axeY = axeY+ speed2;
   strokeWeight(3);
   
-  // barrière
-  if (barriere != ball){
-    fill(240, 0, 0)
+
+  
+  // barrière gauche
+var w = 0;
+  for (var w = 0; w < 500; w = w + 120) {
+    fill (300, 100, 100)
+    rect(0, w, 10, 100, 0)
   }
-   else if (barriere == ball){
-  fill(0, 0, 0)}
-  var z = 0;
-  var barriere = rect(0, 0, 10, 100, 0) ;
-  var barriere = rect(0, 110, 10, 100, 0);
-  var barriere = rect(0, 220, 10, 100, 0);
-  var barriere = rect(0, 330, 10, 100, 0);
-  var barriere = rect(0, 440, 10, 100, 0);
-  var barriere = rect(690, 0, 10, 100, 0);
-  var barriere = rect(690, 0, 10, 100, 0) ;
-  var barriere = rect(690, 110, 10, 100, 0);
-  var barriere = rect(690, 220, 10, 100, 0);
-  var barriere = rect(690, 330, 10, 100, 0);
-  var barriere = rect(690, 440, 10, 100, 0);
-  var barriere = rect(40, 0, 100, 10, 0);
-  var barriere = rect(160, 0, 100, 10, 0);
-  var barriere = rect(280, 0, 100, 10, 0);
-  var barriere = rect(400, 0, 100, 10, 0);
-  var barriere = rect(520, 0, 100, 10, 0);
-  var barriere = rect(20, 590, 100, 10, 0);
-  var barriere = rect(140, 590, 100, 10, 0);
-  var barriere = rect(280, 590, 100, 10, 0);
-  var barriere = rect(400, 590, 100, 10, 0);
-  var barriere = rect(520, 590, 100, 10, 0);
+    
+
+  // barriere droite 
+  var p = 0
+  for (var p = 0; p < 500; p = p + 120) {
+    fill(0, 0, 30)
+    rect(690, p, 10, 100, 0);
+  }
+  // barriere haut
+  var k = 0
+  for (var k = 0;k < width; k = k + 120){
+    fill (20, 200, 20)
+    rect(k, 0, 100, 10, 0)
+
+  }
+
+  // barriere bas 
+  var i  = random(0, 300)
+  var e = random(20, 500)
+  var z = 0
+    for (var z = 0;z < width; z = z + 120) {
+    fill(i, e, e)
+    rect(z, 590, 100, 10, 0)
+    }
+
 
 
   }
